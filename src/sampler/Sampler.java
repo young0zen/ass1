@@ -1,7 +1,8 @@
 package sampler;
 
-import world.Config;
+import world.*;
 
 public interface Sampler {
-    Config sample();
+    BoxConfig sampleBox();
+    RobotConfig sampleRobot();
 }

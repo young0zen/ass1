@@ -2,8 +2,14 @@ package world;
 
 public class RobotConfig extends Config{
 
+
     public RobotConfig(double x, double y, double alpha) {
         super(x, y, alpha);
+    }
+
+    //initial state
+    public RobotConfig(Robot robot) {
+        super(robot.getx(), robot.gety(), robot.getAlpha());
     }
 
     public Point getCenter() {

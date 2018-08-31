@@ -1,14 +1,19 @@
 package sampler;
 
+import java.util.Random;
+
+import com.sun.xml.internal.rngom.parse.host.Base;
 import world.BoxConfig;
 import world.Config;
 import world.RobotConfig;
 
-public class NearObstacleSampler extends BaseSampler implements Sampler {
+public class RandomSampler extends BaseSampler implements Sampler {
+    Random r = new Random();
 
-    NearObstacleSampler(Config initial) {
+    RandomSampler(Config initial) {
         super(initial);
     }
+
 
     @Override
     public BoxConfig sampleBox() {

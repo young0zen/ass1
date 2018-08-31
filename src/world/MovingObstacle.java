@@ -6,8 +6,10 @@ public class MovingObstacle extends Obstacle {
 
     public MovingObstacle(double x, double y, double width) {
         super(x, y);
+
         this.width = width;
     }
+
 
     @Override
     public boolean collideWith(Obstacle o) {
@@ -16,6 +18,8 @@ public class MovingObstacle extends Obstacle {
 
     @Override
     public boolean isMovable() { return true; }
+
+
 
     @Override
     public Point bottomLeft() {
