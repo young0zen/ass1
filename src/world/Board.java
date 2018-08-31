@@ -9,6 +9,4 @@ enum Direction {
 public class Board {
     Robot robot;
     List<Obstacle> obstacles;
-
-
 }

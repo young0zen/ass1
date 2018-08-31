@@ -20,34 +20,33 @@ public class MovingObstacle extends Obstacle {
     @Override
     public Point bottomLeft() {
         double t = width / 2;
-        return new Point(center.x - t, center.y - t);
+        return new Point(getx() - t, gety() - t);
     }
 
     @Override
     public Point topRight() {
         double t = width / 2;
-        return new Point(center.x + t, center.y + t);
+        return new Point(getx() + t, gety() + t);
     }
 
     private void moveTo(double x, double y) {
-        center.x = x;
-        center.y = y;
+        setCenter(new Point(x, y));
     }
 
     public void move(Direction dir, double distance) {
 
         switch(dir) {
             case up:
-                moveTo(center.x, center.y + distance);
+                moveTo(getx(), gety() + distance);
                 break;
             case down:
-                moveTo(center.x, center.y - distance);
+                moveTo(getx(), gety() - distance);
                 break;
             case left:
-                moveTo(center.x - distance, center.y);
+                moveTo(getx() - distance, gety());
                 break;
             case right:
-                moveTo(center.x + distance, center.y);
+                moveTo(getx() + distance, gety());
                 break;
             default:
                 break; /*NOT REACHED*/

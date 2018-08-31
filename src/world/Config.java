@@ -1,12 +1,24 @@
 package world;
 
-public class Config {
-    public Point center;
-    public double alpha;
+import java.util.ArrayList;
 
-    public Config(double x, double y, double alpha) {
-        center.x = x;
-        center.y = y;
-        this.alpha = alpha;
+public class Config {
+    private ArrayList<Double> vector;
+
+    public Config(double... configs) {
+        vector = new ArrayList(0);
+        for(double e : configs) {
+            vector.add(e);
+        }
+    }
+
+    public Config(ArrayList<Double> configs) {
+        for(Double e : configs) {
+            vector.add(e);
+        }
+    }
+
+    public ArrayList<Double> getVector() {
+        return vector;
     }
 }
