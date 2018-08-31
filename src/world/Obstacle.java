@@ -1,18 +1,20 @@
 package world;
 
-abstract public class Obstacle {
-    Point center;
 
-    Obstacle(double x, double y) {
+
+abstract public class Obstacle {
+    protected Point center;
+
+    public Obstacle(double x, double y) {
         center.x = x;
         center.y = y;
     }
 
     abstract public boolean collideWith(Obstacle o);
 
-    abstract boolean isMovable();
+    abstract public boolean isMovable();
 
-    abstract Point bottomLeft();
+    abstract public Point bottomLeft();
 
-    abstract Point topRight();
+    abstract public Point topRight();
 }

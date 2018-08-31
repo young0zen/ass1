@@ -1,9 +1,9 @@
 package world;
 
 public class Robot {
-    Config config;
+    private Config config;
 
-    Robot(double x, double y, double alpha) {
+    public Robot(double x, double y, double alpha) {
         config = new Config(x, y, alpha);
     }
 }

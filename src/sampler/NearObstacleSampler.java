@@ -1,4 +1,6 @@
-package world;
+package sampler;
+
+import world.Config;
 
 public class NearObstacleSampler implements Sampler {
 

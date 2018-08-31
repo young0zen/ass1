@@ -1,7 +1,8 @@
-package world;
-
+package sampler;
 
 import java.util.Random;
+
+import world.Config;
 
 public class UniformSampler implements Sampler {
     Random r = new Random();
